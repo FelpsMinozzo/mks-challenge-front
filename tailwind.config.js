@@ -17,6 +17,9 @@ module.exports = {
       },
       fontFamily: {
         'serif': ['Montserrat']
+      },
+      spacing:{
+        'prod' : '40vw'
       }
     },
   },

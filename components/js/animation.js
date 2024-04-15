@@ -1,13 +1,17 @@
 const toggleAnimation = (value) => {
     const Sidebar = document.getElementById('slide');
-    
-    if(value === 0){
-        Sidebar.classList.remove('slide1');
-        Sidebar.classList.add('slide2');
-    } else if(value === 1){
-        Sidebar.classList.remove('slide2');
-        Sidebar.classList.add('slide1');
+
+    const classMap = {
+        0: ['slide1', 'slide2'],
+        1: ['slide2', 'slide1'],
     };
+
+    if (value in classMap) {
+        const [classToRemove, classToAdd] = classMap[value];
+        Sidebar.classList.remove(classToRemove);
+        Sidebar.classList.add(classToAdd);
+    }
+
 };
 
 export default toggleAnimation;

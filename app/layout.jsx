@@ -17,11 +17,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
-      <body className="overflow-hidden z-1">
-        <Header className="z-1"/>
+      <body className="bg-[#F9F9F9] overflow-hidden z-1">
+        <Header className="z-2"/>
         <Sidebar />
         {children}
-        <Footer className="z-1"/>
+        <Footer className="z-2"/>
       </body>
     </html>
   );

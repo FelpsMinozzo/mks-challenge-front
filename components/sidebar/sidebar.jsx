@@ -9,18 +9,18 @@ export default function Sidebar() {
         const CloseCart = document.getElementById('CloseBtn');
         const OpenCart = document.getElementById('CartBtn');
 
-        CloseCart.addEventListener('click',()=>{ toggleAnimation(0)});
-        OpenCart.addEventListener('click', ()=>{ toggleAnimation(1)});
+        OpenCart.addEventListener('click',()=>{ toggleAnimation(0)});
+        CloseCart.addEventListener('click', ()=>{ toggleAnimation(1)});
 
         return()=>{
-            CloseCart.removeEventListener('click', ()=>{ toggleAnimation(0)});
-            OpenCart.removeEventListener('click', ()=>{toggleAnimation(1)});
+            OpenCart.removeEventListener('click', ()=>{ toggleAnimation(0)});
+            CloseCart.removeEventListener('click', ()=>{toggleAnimation(1)});
         }
     }, []);
 
     return (
-        <div className="">
-            <div className="sidebar slide2" id="slide">
+        <div>
+            <div className="sidebar slide1" id="slide">
                 <h1 className="text-white text-[1.6rem] px-4 font-bold">Carrinho<br />de Compras</h1>
                 <CloseButton id="CloseBtn" />
             </div>
