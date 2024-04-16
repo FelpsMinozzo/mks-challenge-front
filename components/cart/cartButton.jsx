@@ -12,8 +12,6 @@ export default function CartButton() {
     
     const { cartProducts } = useContext(CartContext);
 
-    const cartProductsLen = cartProducts ? cartProducts.length : 0;
-    
     return (
     <button id="CartBtn" onClick={handleClick}>
         <div className="rounded-md bg-white flex items-center justify-center p-4 py-[0.4rem]">
@@ -21,7 +19,7 @@ export default function CartButton() {
                  <AiOutlineShoppingCart />
             </div>
             &nbsp;
-            <p>{cartProductsLen}</p>
+            <h1>{cartProducts ? cartProducts.length : 0}</h1>
         </div>
     </button>
     );
