@@ -14,15 +14,25 @@ export const metadata = {
 };
 
 
+import React from "react";
+import Products from '@/components/products/productGrid'
+
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
-      <body className="bg-[#F9F9F9] overflow-hidden z-1">
-        <Header className="z-2"/>
-        <Sidebar />
-        {children}
-        <Footer className="z-2"/>
+      <body className="bg-[#F9F9F9] overflow-hidden">
+        <div>
+          <Header/>
+          <Sidebar/>
+        </div>
+        <main className="">
+          {children}
+        </main>
+        <div>
+          <Footer/>
+        </div>
       </body>
     </html>
   );
 }
+
